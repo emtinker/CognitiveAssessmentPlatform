@@ -1,0 +1,8 @@
+# Stage the modified files
+git add README.md speedread.prompt.txt
+
+# Create commit with descriptive message
+git commit -m "Add comprehensive speed reading feature specification with Flash-Light mode"
+
+# Push to origin master
+git push origin master

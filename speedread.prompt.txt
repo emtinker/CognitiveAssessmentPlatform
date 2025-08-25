@@ -1,0 +1,121 @@
+### **Base44 Prompt: Add a "Flash-Light" Speed-Reading Mode to the Memory Recall Calibrator**
+
+**Project Overview:**
+We are adding a new feature to our existing "Memory Recall Calibrator" application. This feature will be a speed-reading mode, which we'll call "Flash-light." It will allow the user to review the text from a saved assessment session by displaying it one word at a time at a user-controlled speed.
+
+**User Story:**
+As a user, I want to be able to quickly review the content of a memory assessment before taking the quiz. I want to access a speed-reading view from the dashboard, control the playback speed, and start and stop the reading process so I can efficiently absorb the information.
+
+**Detailed Feature Requirements:**
+
+**1. Dashboard Integration:**
+*   On the `/Dashboard` page, next to each existing assessment session in the list, add a new button labeled "**Flash-Read**".
+*   When a user clicks the "Flash-Read" button, they should be navigated to a new, dedicated speed-reading page for that specific assessment's text content.
+
+**2. The "Flash-Read" View/Page:**
+*   Create a new page or view in the application.
+*   This view should have a clean, minimalist interface designed to minimize distractions.
+*   In the center of the screen, there should be a large, clear text display area where the words will appear.
+
+**3. Core Speed-Reading Functionality (Implement with JavaScript):**
+*   **Word Display:** The text content from the selected assessment should be split into individual words. These words will be displayed one at a time in the central text area.
+*   There should only be 4-9 words on the screen at a time with a soft  characters limit  on the screen at one time. 
+*   **Sequential Flashing:** The words should appear sequentially, replacing the previous word. Do not display the entire text at once.
+
+**4. User Controls:**
+*   **Play/Pause Button:**
+    *   A primary button that toggles between "Play" and "Pause."
+    
+    *   When "Play" is clicked, the words from the text will begin flashing on the screen at the selected speed. The button text should change to "Pause."
+    *   When "Pause" is clicked, the word display will stop on the current word. The button text should change back to "Play."
+*   **Speed Control Slider:**
+    *   Implement a horizontal slider to control the words per minute (WPM).
+    *   The slider's range must be from a minimum of **50 WPM** to a maximum of **800 WPM**.
+    *   The default starting value for the slider should be **200 WPM**.
+*   **WPM Display:**
+    *   Next to the slider, display the current WPM value numerically (e.g., "200 WPM"). This value should update in real-time as the user moves the slider.
+*   **Back Button:**
+    *   Include a clear "Back to Dashboard" or "Done" button so the user can easily exit the Flash-Read view and return to their dashboard.
+    *   When the user completes the flash-light reading session 
+
+**5. Advanced Reading Controls:**
+*   **Progress Bar:**
+    *   Display a horizontal progress bar showing reading position in the text
+    *   Show percentage completed and estimated time remaining
+    *   Allow clicking on progress bar to jump to different positions
+
+*   **Text Chunk Controls:**
+    *   Allow users to adjust chunk size (1-9 words per display)
+    *   Implement intelligent chunking that keeps related phrases together
+    *   Add option to automatically adjust chunk size based on sentence complexity
+
+*   **Reading Statistics:**
+    *   Track and display total words read
+    *   Calculate effective reading speed (accounting for pauses)
+    *   Show reading session duration
+    *   Generate a heat map of speed variations throughout the text
+
+**6. Visual Optimization:**
+*   **Focus Point:**
+    *   Display a fixed marker (.|) in the center of the reading area
+    *   Position words so their optimal recognition point aligns with marker
+    *   Use subtle animations for word transitions
+
+*   **Text Display:**
+    *   Implement variable font sizing (14px - 72px)
+    *   Support high-contrast color schemes
+    *   Add option for dyslexia-friendly font
+    *   Enable adjustable line spacing and margins
+
+**7. Keyboard Controls:**
+*   Space bar: Toggle Play/Pause
+*   Arrow Up/Down: Adjust speed by 10 WPM
+*   Arrow Left/Right: Skip backward/forward by sentence
+*   Ctrl + Arrow Left/Right: Skip backward/forward by paragraph
+*   'R': Reset to beginning
+*   'ESC': Exit to dashboard
+
+**8. Mobile Optimization:**
+*   Implement touch-friendly controls
+*   Support portrait and landscape orientations
+*   Add gesture controls (swipe for speed, tap for play/pause)
+*   Optimize text display for smaller screens
+
+**9. Reading Modes:**
+*   **Normal Mode:** Standard left-to-right word display
+*   **RSVP Mode:** Rapid Serial Visual Presentation at center point
+*   **Highlight Mode:** Full text with moving highlight
+*   **Fade Mode:** Smooth transition between words
+
+**10. Performance Requirements:**
+*   Maximum latency of 16ms between word displays
+*   Smooth animation at 60fps
+*   Pre-load next chunk of text to prevent stuttering
+*   Efficient text parsing and tokenization
+*   Local storage of reading progress and settings
+
+**11. Accessibility Features:**
+*   Screen reader compatibility
+*   Keyboard navigation support
+*   Adjustable contrast ratios
+*   Variable animation speeds
+*   Support for custom color schemes
+
+**12. Error Handling:**
+*   Graceful recovery from text parsing errors
+*   Auto-save of reading progress
+*   Offline support
+*   Handle network interruptions
+*   Provide user feedback for all operations
+
+**13. Analytics Integration:**
+*   Track reading speed patterns
+*   Measure comprehension vs. speed correlation
+*   Generate reading improvement suggestions
+*   Export reading statistics in CSV format
+
+---
+
+There you go, my friend! This magic spell has all the ingredients Base44 needs to build the feature! It's like giving it a recipe for a super-fast taco delivery system, but for knowledge!
+
+I'm so excited! This will make our Super-Memory-Machine even more powerful! Let me know how the spell works! **WOOOOOOOOO!**
